@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 listing_id,manufacturer,model,region,image_url,description,condition,state_id,posting_date,mileage,status,price,owner_id,rent_time
 7303695233,toyota,prius hb (natl,worcester / central MA,https://images.craigslist.org/00g0g_fLgyxwUjVkiz_0fe0bq_600x450.jpg,"Like cup prevent out. Level benefit ok social involve. Family as catch seek civil easy attention.
 Go five not face offer house. Pull allow next watch store partner fly pull.",excellent,ma,2024-04-29 03:15:50,126953,inactive,33.75589838491427,95ced728,30
@@ -32,3 +33,26 @@ Thing rise enter week six happen. Seem high new majority. At trouble own industr
 7314134109,ford,focus,st george,https://images.craigslist.org/00o0o_fcLB6nBJU5Iz_0CI0t2_600x450.jpg,View successful want also you clear old. International realize detail.,excellent,ut,2023-11-21 14:46:12,168965,inactive,45.9505905740074,44ff316f,15
 7306895452,ford,super duty f-550 drw,birmingham,https://images.craigslist.org/00h0h_6tzH4cVHrm5z_0kE0fu_600x450.jpg,"Although his war know. Modern environment study. Single both dog majority. Maintain throw PM perform eat pretty experience.
 Hot relate measure our. I especially his huge science international.",good,al,2023-11-21 10:46:39,122907,active,49.251561794367426,78744be6,14
+=======
+listing_id,manufacturer,model,region,image_url,description,condition,state_id,posting_date,mileage,status,price,owner_id,rent_time
+7304209003,ford,escape,st cloud,https://images.craigslist.org/00c0c_kvvVHE9AHVDz_0x20oM_600x450.jpg,sample description 1,excellent,mn,2023-10-02 1:32,87830,active,5.962523675879584,59def556,7
+7310291957,toyota,camry,huntsville / decatur,https://images.craigslist.org/00f0f_jYADxCTwmjoz_0ak07K_600x450.jpg,sample description 2,good,al,2024-04-08 7:29,110810,active,42.43128535116581,34a358d4,29
+7315233417,gmc,sierra 3500hd,topeka,https://images.craigslist.org/00B0B_dGDUV4xvlF1z_0jm0cT_600x450.jpg,sample description 3,good,ks,2024-04-27 3:47,58460,inactive,24.479760345645495,a0ae68e7,14
+7307664999,chevrolet,malibu,lincoln,https://images.craigslist.org/00808_c3QRw51MEJCz_04Q06s_600x450.jpg,sample description 4,like new,ne,2023-12-02 14:20,110203,active,30.51784567900487,a0ae68e7,10
+7316551230,honda,civic,san diego,https://images.craigslist.org/00R0R_6xu0LEvSV1bz_0cU09G_600x450.jpg,sample description 5,excellent,ca,2023-11-30 0:09,115065,inactive,32.45408927740263,a0ae68e7,19
+7315770787,ford,f350 xl diesel 4x4,el paso,https://images.craigslist.org/00R0R_3UKDmRzXyiWz_0t20CI_600x450.jpg,sample description 6,good,tx,2024-02-27 3:41,12345,active,54.73759877438508,ea0e89f7,9
+7303585413,alfa-romeo,romeo stelvio ti sport,santa fe / taos,https://images.craigslist.org/00J0J_lrL4weEiuZuz_0gw0co_600x450.jpg,sample description 7,good,nm,2024-03-14 21:21,172135,active,49.56676693,db9c33aa,5
+7315066721,honda,civic ex,charlotte,https://images.craigslist.org/00d0d_6uZEaKbQjzSz_0ak07K_600x450.jpg,sample description 8,good,nc,2024-02-10 1:33,56909,active,56.62752742590224,10bd1189,13
+7315601085,honda,civic,new york city,https://images.craigslist.org/00Q0Q_3hD3yT0cfRtz_0x20oM_600x450.jpg,sample description 9,excellent,ny,2024-03-23 14:04,161635,inactive,43.97554902,1a97288c,11
+7307491645,jeep,wrangler,greenville / upstate,https://images.craigslist.org/00I0I_cVqfO8ePehLz_0cU09G_600x450.jpg,sample description 10,excellent,sc,2023-09-07 14:03,124126,inactive,5.512192678951497,db9c33aa,26
+7313957163,mazda,mazda6,new haven,https://images.craigslist.org/00R0R_jyDPNUjFGaSz_0ew0aT_600x450.jpg,sample description 11,good,ct,2023-10-24 15:23,164521,inactive,50.49660397835575,1a97288c,8
+7308205625,chevrolet,lifted silverado 2500,yakima,https://images.craigslist.org/00a0a_7R2hfZ8PegKz_0jm0ew_600x450.jpg,sample description 12,good,wa,2024-05-15 2:49,170290,active,6.2730993631008065,34a358d4,17
+7302062768,alfa-romeo,romeo giulia sedan 4d,visalia-tulare,https://images.craigslist.org/01212_9YGV5SROgpgz_0gw0co_600x450.jpg,sample description 13,good,ca,2023-12-10 21:17,97062,active,34.594163324244974,59def556,26
+7302861361,mercedes-benz,benz,norfolk / hampton roads,https://images.craigslist.org/00q0q_lqnBuI0fEvjz_0lM0t2_600x450.jpg,sample description 14,good,va,2024-04-25 16:18,146898,active,48.35550828810835,ea0e89f7,24
+7315090402,subaru,legacy 2.5i limited,mohave county,https://images.craigslist.org/01212_h0PRyd7SmPRz_0cU09G_600x450.jpg,sample description 15,good,az,2023-11-23 14:41,145525,active,34.69967844356061,0fd27398,17
+7306053731,chrysler,300 touring l sedan 4d,redding,https://images.craigslist.org/00000_kkdGTrtQu9Mz_0gw0co_600x450.jpg,sample description 16,good,ca,2023-08-31 17:50,62637,active,25.916700143435765,1a97288c,22
+7306827424,acura,mdx,sarasota-bradenton,https://images.craigslist.org/00E0E_6iQL2pX0ZTnz_0CI0t2_600x450.jpg,sample description 17,good,fl,2024-06-08 22:30,111139,active,9.230917120705925,a0ae68e7,18
+7316738901,toyota,venza,asheville,https://images.craigslist.org/01717_ao60XXaPrvVz_0kE0fu_600x450.jpg,sample description 18,excellent,nc,2024-03-04 13:15,23822,inactive,9.812657470670453,af5e1987,8
+7310463168,jeep,grand cherokee,western massachusetts,https://images.craigslist.org/00t0t_6vzfszBqCMlz_0t20CI_600x450.jpg,sample description 19,good,ma,2023-07-06 10:03,119997,inactive,39.34856037845873,ea0e89f7,18
+7305773173,gmc,acadia,lima / findlay,https://images.craigslist.org/00101_6XN4bGjaqiaz_0ak07K_600x450.jpg,sample description 20,excellent,oh,2024-03-13 9:24,170658,inactive,36.23412898525578,db9c33aa,5
+>>>>>>> 92b9b7f46ec4f4000c901480d81927bbea5f1799
