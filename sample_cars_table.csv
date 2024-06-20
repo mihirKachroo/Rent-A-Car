@@ -1,51 +1,21 @@
-id,manufacturer,model,drive,cylinders,transmission,paint_color,car_id
-7316737397,bmw,4 series 440i xdrive gran,fwd,6,automatic,grey,1
-7315303863,mercedes-benz,s-class,rwd,4,automatic,black,2
-7306160055,audi,q8 premium sport utility 4d,rwd,6,automatic,blue,3
-7310276447,ford,f-150,4wd,8,automatic,white,4
-7303685479,chevrolet,equinox,4wd,4,automatic,white,5
-7311927824,ford,expedition max,4wd,6,automatic,black,6
-7310325874,acura,mdx sh-awd w/technology,4wd,6,automatic,white,7
-7316146250,toyota,sienna xle minivan 4d,fwd,6,automatic,silver,8
-7314542698,volkswagen,e-golf sel premium,rwd,6,automatic,blue,9
-7308204040,toyota,tacoma,4wd,6,automatic,black,10
-7309006024,ford,f-150,4wd,6,automatic,black,4
-7315250912,dodge,challenger sxt coupe,rwd,6,automatic,black,11
-7316874728,nissan,altima,fwd,8,automatic,black,12
-7316172343,mercedes-benz,hino 268a,rwd,6,automatic,white,13
-7307808269,jeep,cherokee,4wd,6,automatic,black,14
-7314979287,chevrolet,c-10,4wd,6,manual,silver,15
-7316842888,chevrolet,malibu,fwd,4,automatic,silver,16
-7314527730,bmw,328i,4wd,6,automatic,black,17
-7315246055,chevrolet,equinox lt awd,fwd,6,automatic,silver,18
-7313415077,chevrolet,malibu lt,rwd,4,automatic,white,19
-7316516953,audi,a4,4wd,4,automatic,silver,20
-7304764850,subaru,outback,rwd,4,automatic,white,21
-7314304686,jeep,wrangler,4wd,5,automatic,silver,22
-7316497311,audi,s4,rwd,6,automatic,red,23
-7306044408,gmc,yukon,4wd,8,automatic,brown,24
-7315858337,gmc,sierra 1500 regular cab,rwd,6,automatic,brown,25
-7316521595,ford,f-250,4wd,4,automatic,silver,26
-7311254022,ford,f150 supercrew cab lariat,4wd,6,automatic,white,27
-7314631799,chevrolet,tahoe lt sport utility,4wd,8,automatic,black,28
-7314249325,ford,fusion,fwd,4,automatic,red,29
-7310762992,buick,verano,4wd,4,automatic,red,30
-7307120933,ford,fusion se,4wd,6,automatic,grey,31
-7314547467,toyota,camry hybrid le sedan 4d,fwd,6,automatic,black,32
-7313151519,chevrolet,traverse,4wd,6,automatic,grey,33
-7311107018,mercedes-benz,gla,fwd,8,automatic,blue,34
-7312313864,mazda,mx-5 miata grand touring,rwd,6,automatic,black,35
-7310917301,ford,f-150,4wd,8,automatic,red,4
-7314294370,chevrolet,silverado 2500 hd ltz,4wd,8,automatic,black,36
-7305612349,mini,Genesis G70 3.3T Advanced Sedan,rwd,6,automatic,red,37
-7305117163,hyundai,santa fe,4wd,6,automatic,grey,38
-7301650586,volvo,s60 t5 momentum sedan 4d,fwd,8,automatic,red,39
-7316820400,ford,f-250 super duty,4wd,8,automatic,red,40
-7316332310,lexus,gx 470,4wd,8,automatic,silver,41
-7315145118,toyota,highlander limited,4wd,6,automatic,white,42
-7311450840,mercedes-benz,sl63 amg,fwd,8,automatic,black,43
-7313719866,chevrolet,deluxe,fwd,6,manual,green,44
-7313956924,mazda,cx-9,fwd,6,automatic,white,45
-7315404392,chevrolet,silverado 3500 hd -,4wd,8,automatic,silver,46
-7311884969,jaguar,xj8,rwd,8,automatic,green,47
-7315896897,pontiac,grand am,fwd,6,automatic,red,48
+id,manufacturer,model,drive,cylinders,transmission,fuel
+7316070182,mini,cooper convertible,fwd,3,automatic,gas
+7315046692,ford,focus,4wd,6,automatic,other
+7309903977,honda,Scion iM Hatchback 4D,fwd,6,automatic,gas
+7308144849,mercedes-benz,c-class c 300,rwd,4,automatic,gas
+7303112586,audi,a3,fwd,4,automatic,gas
+7315272787,chevrolet,equinox,fwd,6,automatic,gas
+7301590585,chevrolet,ss sedan 4d,rwd,8,automatic,gas
+7314895829,toyota,4runner 4wd,4wd,6,automatic,gas
+7307956205,ford,f-150 xlt,rwd,8,automatic,gas
+7313362366,audi,a6 2.0t premium plus sedan,fwd,6,automatic,gas
+7315719991,toyota,camry solara,fwd,4,automatic,gas
+7306464296,ford,f350 diesel powerstroke fx4,4wd,6,automatic,diesel
+7308015106,hyundai,elantra,4wd,4,automatic,gas
+7302111770,chevrolet,malibu,fwd,6,automatic,gas
+7311951693,ford,f150 4x4,4wd,8,automatic,gas
+7305850264,gmc,acadia,4wd,6,automatic,gas
+7316901905,mercedes-benz,cls-class,rwd,8,automatic,gas
+7315274826,jeep,wrangler unlimited sahara,fwd,4,manual,gas
+7305670449,ram,liberty,4wd,4,automatic,gas
+7312101011,ford,expedition el limited,4wd,8,automatic,gas
