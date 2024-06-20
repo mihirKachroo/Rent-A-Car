@@ -1,0 +1,51 @@
+id,manufacturer,model,drive,cylinders,transmission,paint_color,car_id
+7304740863,dodge,avenger,rwd,8,automatic,black,1
+7315418880,mazda,3,fwd,4,automatic,blue,2
+7308351653,toyota,tacoma access cab sr,fwd,8,automatic,silver,3
+7316046880,volkswagen,jetta se,fwd,5,automatic,black,4
+7316681092,ford,ranger,4wd,4,automatic,grey,5
+7306586367,ford,escape,4wd,6,automatic,green,6
+7316338679,nissan,altima 2.5 sr,fwd,4,automatic,white,7
+7316636488,hyundai,santa fe,fwd,6,automatic,silver,8
+7316924521,bmw,x5,4wd,6,automatic,black,9
+7313478798,subaru,putback,4wd,4,automatic,white,10
+7303213510,jeep,wrangler,4wd,6,manual,black,11
+7315009988,lexus,lx 470,4wd,8,automatic,black,12
+7308575011,honda,civic cpe,fwd,4,automatic,black,13
+7306921296,dodge,charger sxt,rwd,8,automatic,blue,14
+7309726002,acura,mdx sh-awd sport utility,rwd,8,automatic,black,15
+7313955236,jeep,grand cherokee,rwd,6,automatic,white,16
+7310224425,dodge,charger,rwd,6,automatic,black,17
+7315541653,volvo,s60 t5,4wd,5,automatic,white,18
+7312873544,toyota,rav4,4wd,8,automatic,white,19
+7312672944,honda,odyssey,fwd,6,automatic,silver,20
+7315040127,ford,explorer limited,4wd,6,automatic,black,21
+7303037235,chevrolet,silverado 1500,4wd,8,automatic,silver,22
+7311648611,ram,promaster cargo van,fwd,6,automatic,white,23
+7304052561,jeep,wrangler sahara sport,4wd,6,automatic,red,24
+7307911484,ford,f-550 crew cab flat bed xlt 4x4 drw,4wd,8,automatic,red,25
+7303760016,hyundai,sonata sel plus sedan 4d,fwd,8,automatic,black,26
+7310649382,chevrolet,suburban ltz 1500 4x4,rwd,8,automatic,white,27
+7313271104,jeep,liberty,rwd,6,automatic,black,28
+7312322985,ford,mustang gt coupe 2d,rwd,8,automatic,black,29
+7314804499,ram,1500 laramie,4wd,8,automatic,black,30
+7315127572,porsche,boxster,rwd,6,automatic,white,31
+7305096036,lexus,gs 350 sedan 4d,rwd,6,automatic,white,32
+7315298657,mercedes-benz,glk-class,4wd,8,automatic,silver,33
+7316731256,ford,f700,4wd,6,automatic,silver,34
+7316352843,toyota,scion tc,fwd,4,automatic,white,35
+7314953068,ford,2dr sedan,4wd,4,automatic,silver,36
+7314088035,chrysler,200,fwd,4,automatic,black,37
+7313904361,cadillac,ct6 sedan,4wd,6,automatic,red,38
+7304707506,chevrolet,cobalt,fwd,4,manual,red,39
+7313998734,honda,accord,fwd,4,automatic,white,40
+7314766451,ford,escape,4wd,4,automatic,white,6
+7316695011,chevrolet,x3,4wd,4,automatic,white,41
+7306651911,rover,discovery sport,4wd,8,automatic,white,42
+7303681285,audi,q8 premium sport utility 4d,fwd,8,automatic,black,43
+7310962031,bmw,3 series 328d xdrive sport,4wd,8,automatic,black,44
+7310988798,ford,f-250,4wd,6,automatic,black,45
+7303286315,jeep,wrangler,4wd,4,manual,black,11
+7310007114,ford,transit connect,4wd,6,automatic,white,46
+7309697685,lexus,nx 300 sport utility 4d,4wd,8,automatic,white,47
+7308388950,subaru,forester,4wd,4,automatic,silver,48
