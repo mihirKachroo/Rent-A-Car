@@ -1,52 +1,52 @@
 state_id,state_name,time_zone
-al,Alabama,Central
 ak,Alaska,Alaska
-az,Arizona,Mountain
+al,Alabama,Central
 ar,Arkansas,Central
+az,Arizona,Mountain
 ca,California,Pacific
 co,Colorado,Mountain
 ct,Connecticut,Eastern
-dc,District of Columbia,Eastern
+dc,"District of Columbia",Eastern
 de,Delaware,Eastern
 fl,Florida,Eastern
 ga,Georgia,Eastern
 hi,Hawaii,Hawaii-Aleutian
+ia,Iowa,Central
 id,Idaho,Mountain
 il,Illinois,Central
 in,Indiana,Eastern
-ia,Iowa,Central
 ks,Kansas,Central
 ky,Kentucky,Eastern
 la,Louisiana,Central
-me,Maine,Eastern
-md,Maryland,Eastern
 ma,Massachusetts,Eastern
+md,Maryland,Eastern
+me,Maine,Eastern
 mi,Michigan,Eastern
 mn,Minnesota,Central
-ms,Mississippi,Central
 mo,Missouri,Central
+ms,Mississippi,Central
 mt,Montana,Mountain
-nc,North Carolina,Eastern
+nc,"North Carolina",Eastern
+nd,"North Dakota",Central
 ne,Nebraska,Central
+nh,"New Hampshire",Eastern
+nj,"New Jersey",Eastern
+nm,"New Mexico",Mountain
 nv,Nevada,Pacific
-nj,New Jersey,Eastern
-nm,New Mexico,Mountain
-ny,New York,Eastern
-nh,New Hampshire,Eastern
-nd,North Dakota,Central
+ny,"New York",Eastern
 oh,Ohio,Eastern
 ok,Oklahoma,Central
 or,Oregon,Pacific
 pa,Pennsylvania,Eastern
-ri,Rhode Island,Eastern
-sc,South Carolina,Eastern
-sd,South Dakota,Central
+ri,"Rhode Island",Eastern
+sc,"South Carolina",Eastern
+sd,"South Dakota",Central
 tn,Tennessee,Central
 tx,Texas,Central
 ut,Utah,Mountain
-vt,Vermont,Eastern
 va,Virginia,Eastern
+vt,Vermont,Eastern
 wa,Washington,Pacific
-wv,West Virginia,Eastern
 wi,Wisconsin,Central
+wv,"West Virginia",Eastern
 wy,Wyoming,Mountain

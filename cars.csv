@@ -1,0 +1,18 @@
+manufacturer,model,drive,cylinders,transmission,fuel
+acura,mdx,rwd,5,automatic,gas
+alfa-romeo,"romeo stelvio ti sport",rwd,6,automatic,gas
+chevrolet,"lifted silverado 2500",4wd,6,automatic,diesel
+chevrolet,malibu,fwd,6,automatic,gas
+ford,escape,4wd,4,automatic,gas
+ford,"f350 xl diesel 4x4",4wd,8,automatic,diesel
+gmc,acadia,4wd,4,automatic,gas
+gmc,"sierra 3500hd",4wd,8,automatic,diesel
+honda,civic,fwd,6,manual,gas
+honda,"civic ex",fwd,6,automatic,gas
+jeep,"grand cherokee",4wd,8,automatic,gas
+jeep,wrangler,rwd,8,automatic,gas
+mazda,mazda6,fwd,4,automatic,gas
+mercedes-benz,benz,4wd,4,automatic,gas
+subaru,"legacy 2.5i limited",4wd,4,automatic,gas
+toyota,camry,fwd,4,automatic,gas
+toyota,venza,4wd,6,automatic,gas
