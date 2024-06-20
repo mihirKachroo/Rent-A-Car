@@ -1,21 +1,21 @@
 id,manufacturer,model,drive,cylinders,transmission,fuel
-7316070182,mini,cooper convertible,fwd,3,automatic,gas
-7315046692,ford,focus,4wd,6,automatic,other
-7309903977,honda,Scion iM Hatchback 4D,fwd,6,automatic,gas
-7308144849,mercedes-benz,c-class c 300,rwd,4,automatic,gas
-7303112586,audi,a3,fwd,4,automatic,gas
-7315272787,chevrolet,equinox,fwd,6,automatic,gas
-7301590585,chevrolet,ss sedan 4d,rwd,8,automatic,gas
-7314895829,toyota,4runner 4wd,4wd,6,automatic,gas
-7307956205,ford,f-150 xlt,rwd,8,automatic,gas
-7313362366,audi,a6 2.0t premium plus sedan,fwd,6,automatic,gas
-7315719991,toyota,camry solara,fwd,4,automatic,gas
-7306464296,ford,f350 diesel powerstroke fx4,4wd,6,automatic,diesel
-7308015106,hyundai,elantra,4wd,4,automatic,gas
-7302111770,chevrolet,malibu,fwd,6,automatic,gas
-7311951693,ford,f150 4x4,4wd,8,automatic,gas
-7305850264,gmc,acadia,4wd,6,automatic,gas
-7316901905,mercedes-benz,cls-class,rwd,8,automatic,gas
-7315274826,jeep,wrangler unlimited sahara,fwd,4,manual,gas
-7305670449,ram,liberty,4wd,4,automatic,gas
-7312101011,ford,expedition el limited,4wd,8,automatic,gas
+7304209003,ford,escape,4wd,4,automatic,gas
+7310291957,toyota,camry,fwd,4,automatic,gas
+7315233417,gmc,sierra 3500hd,4wd,8,automatic,diesel
+7307664999,chevrolet,malibu,fwd,6,automatic,gas
+7316551230,honda,civic,fwd,6,manual,gas
+7315770787,ford,f350 xl diesel 4x4,4wd,8,automatic,diesel
+7303585413,alfa-romeo,romeo stelvio ti sport,rwd,6,automatic,gas
+7315066721,honda,civic ex,fwd,6,automatic,gas
+7315601085,honda,civic,fwd,4,automatic,gas
+7307491645,jeep,wrangler,rwd,8,automatic,gas
+7313957163,mazda,mazda6,fwd,4,automatic,gas
+7308205625,chevrolet,lifted silverado 2500,4wd,6,automatic,diesel
+7302062768,alfa-romeo,romeo giulia sedan 4d,rwd,4,automatic,other
+7302861361,mercedes-benz,benz,4wd,4,automatic,gas
+7315090402,subaru,legacy 2.5i limited,4wd,4,automatic,gas
+7306053731,chrysler,300 touring l sedan 4d,rwd,6,automatic,other
+7306827424,acura,mdx,rwd,5,automatic,gas
+7316738901,toyota,venza,4wd,6,automatic,gas
+7310463168,jeep,grand cherokee,4wd,8,automatic,gas
+7305773173,gmc,acadia,4wd,4,automatic,gas
