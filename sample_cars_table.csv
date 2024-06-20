@@ -1,21 +1,20 @@
-id,manufacturer,model,drive,cylinders,transmission,fuel
-7304209003,ford,escape,4wd,4,automatic,gas
-7310291957,toyota,camry,fwd,4,automatic,gas
-7315233417,gmc,sierra 3500hd,4wd,8,automatic,diesel
-7307664999,chevrolet,malibu,fwd,6,automatic,gas
-7316551230,honda,civic,fwd,6,manual,gas
-7315770787,ford,f350 xl diesel 4x4,4wd,8,automatic,diesel
-7303585413,alfa-romeo,romeo stelvio ti sport,rwd,6,automatic,gas
-7315066721,honda,civic ex,fwd,6,automatic,gas
-7315601085,honda,civic,fwd,4,automatic,gas
-7307491645,jeep,wrangler,rwd,8,automatic,gas
-7313957163,mazda,mazda6,fwd,4,automatic,gas
-7308205625,chevrolet,lifted silverado 2500,4wd,6,automatic,diesel
-7302062768,alfa-romeo,romeo giulia sedan 4d,rwd,4,automatic,other
-7302861361,mercedes-benz,benz,4wd,4,automatic,gas
-7315090402,subaru,legacy 2.5i limited,4wd,4,automatic,gas
-7306053731,chrysler,300 touring l sedan 4d,rwd,6,automatic,other
-7306827424,acura,mdx,rwd,5,automatic,gas
-7316738901,toyota,venza,4wd,6,automatic,gas
-7310463168,jeep,grand cherokee,4wd,8,automatic,gas
-7305773173,gmc,acadia,4wd,4,automatic,gas
+manufacturer,model,drive,cylinders,transmission,fuel
+toyota,prius hb (natl,4wd,4,automatic,hybrid
+chevrolet,chevelle,rwd,8,automatic,gas
+toyota,Isuzu NQR,rwd,4,automatic,diesel
+bmw,3 series 330i xdrive sedan,4wd,6,automatic,gas
+honda,cr-v ex,fwd,4,automatic,gas
+nissan,altima,fwd,4,automatic,gas
+saturn,sl1,fwd,4,automatic,gas
+chevrolet,tahoe,fwd,4,automatic,gas
+nissan,altima sv sedan,fwd,4,automatic,gas
+gmc,sierra 2500hd,4wd,8,automatic,diesel
+pontiac,g6,fwd,6,automatic,gas
+jaguar,e-pace p300 r-dynamic se,4wd,8,automatic,gas
+ford,f150 xlt lariat,fwd,8,automatic,gas
+dodge,journey,4wd,6,automatic,gas
+gmc,yukon xl,fwd,6,automatic,gas
+toyota,rav4,4wd,4,automatic,gas
+jeep,grand cherokee,4wd,6,automatic,gas
+ford,focus,rwd,6,manual,gas
+ford,super duty f-550 drw,4wd,10,automatic,gas
