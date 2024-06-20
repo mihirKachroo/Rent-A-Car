@@ -1,6 +1,6 @@
--- Example UPDATE listing to inactive
+-- Example UPDATE listing to archived
 UPDATE Listings
-SET status = 'inactive'
+SET status = 'archived'
 WHERE listing_id = '7315770787';
 
 -- Example fetch status of updated listing
