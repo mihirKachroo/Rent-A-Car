@@ -1,5 +1,6 @@
 # Rent-a-Car 🚗
 A one-stop-platform for users to rent cars and owners to put up cars.
+> Group Members: Mihir Kachroo, Mike Kwak, Parsh Parikh, Rawsab Said, Siddharth Viswanath
 
 ## 🔨 Creating and Loading Sample Database
 
