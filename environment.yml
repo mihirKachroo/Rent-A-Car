@@ -1,0 +1,13 @@
+name: cs348-project-env 
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - flask
+  - flask-cors
+  - flask-bcrypt
+  - flask-sqlalchemy
+  - mysqlclient
+  - pip
+  - pip:
+    - python-dotenv
