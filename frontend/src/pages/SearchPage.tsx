@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Grid,
@@ -18,6 +18,12 @@ import {
 } from '@mui/material';
 
 const SearchPage: React.FC = () => {
+  const [sortOption, setSortOption] = useState<string>('');
+
+  const handleSortChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setSortOption(event.target.value as string);
+  };
+
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
       {/* Left Drawer for User Information */}
@@ -101,6 +107,26 @@ const SearchPage: React.FC = () => {
           </FormControl>
           <Button variant="contained" color="primary">
             Apply Filters
+          </Button>
+        </Box>
+
+        {/* Sorting Options */}
+        <Box sx={{ mb: 2, display: 'flex', gap: 2 }}>
+          <FormControl variant="outlined" sx={{ minWidth: 180 }}>
+            <InputLabel>Sort By</InputLabel>
+            <Select
+              value={sortOption}
+              onChange={handleSortChange}
+              label="Sort By"
+            >
+              <MenuItem value="price">Price</MenuItem>
+              <MenuItem value="year">Year</MenuItem>
+              <MenuItem value="mileage">Mileage</MenuItem>
+              <MenuItem value="posting_date">Posting Date</MenuItem>
+            </Select>
+          </FormControl>
+          <Button variant="contained" color="primary">
+            Change Sorting Option
           </Button>
         </Box>
 
