@@ -1,4 +1,4 @@
-# Rent a Car
+# Rent a Car 🚗
 One-stop-platform for users to rent cars
 
 ## Creating and loading sample database
