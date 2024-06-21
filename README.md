@@ -1,7 +1,7 @@
 # Rent-a-Car 🚗
 A one-stop-platform for users to rent cars and owners to put up cars.
 
-## Creating and Loading Sample Database
+## 🔨 Creating and Loading Sample Database
 
 In order to run the sample queries against the sample database without using the database-driven application, follow the following steps:
 ### Prerequisites
@@ -69,14 +69,14 @@ Replace `path/to/test_query.sql` with the path to the downloaded SQL file contai
 
 ***
 
-## Running the Database-Driven Application
+## 🖥️ Running the Database-Driven Application
 - Clone the project and install dependencies:
 - cd into ```frontend```
 - run ```npm install```
 - run ```npm start```
 
 
-## Features Supported
+## 💡 Features Supported
 
 The application we are developing for our project currently contains a login/registration page and displays listings. 
 
