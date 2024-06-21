@@ -1,5 +1,5 @@
 # Rent a Car 🚗
-One-stop-platform for users to rent cars
+One-stop-platform for users to rent cars and owners to put up cars
 
 ## Creating and loading sample database
 - Create database locally with ```CREATE DATABASE rent_a_car```
