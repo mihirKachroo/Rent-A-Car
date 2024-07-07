@@ -15,13 +15,14 @@ import {
   Select,
   MenuItem,
   Toolbar,
+  SelectChangeEvent,
 } from '@mui/material';
 
 const SearchPage: React.FC = () => {
   const [sortOption, setSortOption] = useState<string>('');
 
-  const handleSortChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setSortOption(event.target.value as string);
+  const handleSortChange = (event: SelectChangeEvent<string>) => {
+    setSortOption(event.target.value);
   };
 
   return (

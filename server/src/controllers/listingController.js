@@ -1,5 +1,7 @@
+// server/src/controllers/listingController.js
+
+const connection = require('../db');
 const { v4: uuidv4 } = require('uuid');
-const connection = require('../db'); // Assuming you have a db.js file to handle DB connection
 
 const getListings = (req, res) => {
   const query = 'SELECT * FROM Listings';
@@ -79,22 +81,4 @@ const updateListingStatus = (req, res) => {
   });
 };
 
-const getFilteredListings = (req, res) => {
-  const { condition, stateId, price, ownerId } = req.query;
-
-  const query = `
-    SELECT * FROM Listings
-    WHERE \`condition\` = ? AND state_id = ? AND price <= ? AND owner_id != ? AND status = 'active'
-    ORDER BY posting_date ASC
-  `;
-  connection.query(query, [condition, stateId, price, ownerId], (err, results) => {
-    if (err) {
-      console.error('Error fetching filtered listings:', err);
-      res.status(500).send('Server error');
-      return;
-    }
-    res.json(results);
-  });
-};
-
-module.exports = { getListings, createListing, updateListingStatus, getFilteredListings };
+module.exports = { getListings, createListing, updateListingStatus };

@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import ListingsList from '../components/OwnerListingList';
 import ListingDetails from '../components/OwnerListing';
 import CreateListingModal from '../components/CreateListingModal';
+import { Listing } from '../types';
 import {
   Container,
   Box,
@@ -13,18 +14,18 @@ import {
   Link,
 } from '@mui/material';
 
-interface Listing {
-  listing_id: string;
-  manufacturer: string;
-  model: string;
-  year: number;
-  description: string;
-  price: number;
-  condition: string;
-  paint_color: string;
-  mileage: number;
-  image_url: string;
-}
+// interface Listing {
+//   listing_id: string;
+//   manufacturer: string;
+//   model: string;
+//   year: number;
+//   description: string;
+//   price: number;
+//   condition: string;
+//   paint_color: string;
+//   mileage: number;
+//   image_url: string;
+// }
 
 const OwnerMainPage: React.FC = () => {
   const [listings, setListings] = useState<Listing[]>([]);
