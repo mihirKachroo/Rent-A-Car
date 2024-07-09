@@ -1,0 +1,52 @@
+state_id,state_name,time_zone
+al,Alabama,Central
+ak,Alaska,Alaska
+az,Arizona,Mountain
+ar,Arkansas,Central
+ca,California,Pacific
+co,Colorado,Mountain
+ct,Connecticut,Eastern
+dc,District of Columbia,Eastern
+de,Delaware,Eastern
+fl,Florida,Eastern
+ga,Georgia,Eastern
+hi,Hawaii,Hawaii-Aleutian
+id,Idaho,Mountain
+il,Illinois,Central
+in,Indiana,Eastern
+ia,Iowa,Central
+ks,Kansas,Central
+ky,Kentucky,Eastern
+la,Louisiana,Central
+me,Maine,Eastern
+md,Maryland,Eastern
+ma,Massachusetts,Eastern
+mi,Michigan,Eastern
+mn,Minnesota,Central
+ms,Mississippi,Central
+mo,Missouri,Central
+mt,Montana,Mountain
+nc,North Carolina,Eastern
+ne,Nebraska,Central
+nv,Nevada,Pacific
+nj,New Jersey,Eastern
+nm,New Mexico,Mountain
+ny,New York,Eastern
+nh,New Hampshire,Eastern
+nd,North Dakota,Central
+oh,Ohio,Eastern
+ok,Oklahoma,Central
+or,Oregon,Pacific
+pa,Pennsylvania,Eastern
+ri,Rhode Island,Eastern
+sc,South Carolina,Eastern
+sd,South Dakota,Central
+tn,Tennessee,Central
+tx,Texas,Central
+ut,Utah,Mountain
+vt,Vermont,Eastern
+va,Virginia,Eastern
+wa,Washington,Pacific
+wv,West Virginia,Eastern
+wi,Wisconsin,Central
+wy,Wyoming,Mountain
