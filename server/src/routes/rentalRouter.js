@@ -1,8 +1,13 @@
 const express = require('express');
-const router = express.Router();
-const { createRental, getUserRentals } = require('../controllers/rentalController');
+const rentalController = require('../controllers/rentalController');
 
-router.post('/', createRental);
-router.get('/:userId', getUserRentals);
+module.exports = (connection) => {
+  const router = express.Router();
 
-module.exports = router;
+  const controller = rentalController(connection);
+  
+  router.post('/', controller.createRental);
+  router.get('/:userId', controller.getUserRentals);
+
+  return router;
+};

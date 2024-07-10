@@ -18,7 +18,7 @@ const ListingsList: React.FC<ListingsListProps> = ({
         {listings.map((listing) => (
           <ListItem
             button
-            key={listing.listing_id}
+            key={listing.listingId}
             onClick={() => onSelectListing(listing)}
           >
             <ListItemText

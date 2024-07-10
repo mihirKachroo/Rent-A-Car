@@ -4,7 +4,6 @@ const authController = require('../controllers/authController');
 const authRouter = (connection) => {
   const router = express.Router();
 
-  // Inject the MySQL connection into the controller
   const controller = authController(connection);
 
   router.post('/register', controller.register);

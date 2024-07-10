@@ -1,9 +1,10 @@
 const express = require('express');
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const authRouter = require('./routes/authRouter');
 const listingRouter = require('./routes/listingRouter');
-const favoriteRouter = require('./routes/favoriteRouter');
+const favouriteRouter = require('./routes/favouriteRouter');
 const rentalRouter = require('./routes/rentalRouter');
 
 dotenv.config();
@@ -27,14 +28,18 @@ connection.connect(err => {
   console.log('Connected to MySQL');
 });
 
-// Middleware to parse JSON
 app.use(express.json());
 
-// Use authRouter for authentication routes
+app.use(cors({
+  origin: 'http://localhost:3001', // Replace with your client's origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
 app.use('/auth', authRouter(connection));
-app.use('/listings', listingRouter);
-app.use('/favorites', favoriteRouter);
-app.use('/rentals', rentalRouter);
+app.use('/listings', listingRouter(connection));
+app.use('/favourites', favouriteRouter(connection));
+app.use('/rentals', rentalRouter(connection));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

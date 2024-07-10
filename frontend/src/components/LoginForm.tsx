@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box, Typography } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 interface LoginFormProps {
   isOwner?: boolean;
@@ -16,17 +16,13 @@ const LoginForm: React.FC<LoginFormProps> = ({ isOwner }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      if (isOwner) {
-        await ownerLogin(email, password);
-        navigate('/owner');
-      } else {
-        await login(email, password);
-        navigate('/search');
-      }
-      alert('Login successful!');
-    } catch (error) {
-      alert('Login failed. Please check your credentials.');
+
+    if (isOwner) {
+      await ownerLogin(email, password);
+      navigate('/owner');
+    } else {
+      await login(email, password);
+      navigate('/search');
     }
   };
 

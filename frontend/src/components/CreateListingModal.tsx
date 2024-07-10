@@ -32,12 +32,12 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({
     year: '',
     description: '',
     price: '',
-    image_url: '',
+    imageUrl: '',
     region: '',
     condition: '',
-    rent_time: '',
-    paint_color: '',
-    state_id: '',
+    rentTime: '',
+    paintColor: '',
+    stateId: '',
     mileage: '',
   });
 
@@ -117,8 +117,8 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({
           />
           <TextField
             label="Image URL"
-            name="image_url"
-            value={formData.image_url}
+            name="imageUrl"
+            value={formData.imageUrl}
             onChange={handleChange}
           />
           <TextField
@@ -145,19 +145,19 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({
             label="Rent Time (days)"
             name="rent_time"
             type="number"
-            value={formData.rent_time}
+            value={formData.rentTime}
             onChange={handleChange}
           />
           <TextField
             label="Paint Color"
             name="paint_color"
-            value={formData.paint_color}
+            value={formData.paintColor}
             onChange={handleChange}
           />
           <TextField
             label="State ID"
             name="state_id"
-            value={formData.state_id}
+            value={formData.stateId}
             onChange={handleChange}
           />
           <TextField

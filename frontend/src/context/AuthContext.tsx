@@ -27,6 +27,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   const navigate = useNavigate();
 
   const login = async (email: string, password: string) => {
+    console.log('attempting login with ', email);
     try {
       const response = await axios.post('http://localhost:3000/auth/login', {
         email,
@@ -35,9 +36,15 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
       const user: User = response.data;
       setUser(user);
       localStorage.setItem('user', JSON.stringify(user));
-      navigate('/search');
     } catch (error) {
-      alert('Login failed. Please check your credentials.');
+      if (axios.isAxiosError(error)) {
+        console.error('Error response:', error.response);
+        console.error('Error message:', error.message);
+        alert('Login failed. Please check your credentials.');
+      } else {
+        console.error('Unexpected error:', error);
+        alert('An unexpected error occurred.');
+      }
     }
   };
 
@@ -52,7 +59,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
       localStorage.setItem('user', JSON.stringify(owner));
       navigate('/owner-dashboard');
     } catch (error) {
-      alert('Owner login failed. Please check your credentials.');
+      if (axios.isAxiosError(error)) {
+        console.error('Error response:', error.response);
+        console.error('Error message:', error.message);
+        alert('Owner Login failed. Please check your credentials.');
+      } else {
+        console.error('Unexpected error:', error);
+        alert('An unexpected error occurred.');
+      }
     }
   };
 
@@ -64,6 +78,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         dob,
       });
       const user: User = response.data;
+      console.log(user);
       setUser(user);
       localStorage.setItem('user', JSON.stringify(user));
       alert('Registration successful!');

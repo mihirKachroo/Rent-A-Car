@@ -1,6 +1,10 @@
-const createRental = (req, res) => {
+const { v4: uuidv4 } = require('uuid');
+
+const rentalController = (connection) => {
+  const createRental = (req, res) => {
     const { listingId, userId, rentDate, returnDate } = req.body;
     const rentalId = uuidv4();
+    console.log(`Creating rental: ${rentalId} for user: ${userId}, listing: ${listingId}`);
   
     const query = 'INSERT INTO Rental (rental_id, listing_id, user_id, rent_date, return_date, status) VALUES (?, ?, ?, ?, ?, ?)';
     connection.query(query, [rentalId, listingId, userId, rentDate, returnDate, 'renting'], (err, results) => {
@@ -24,6 +28,7 @@ const createRental = (req, res) => {
   
   const getUserRentals = (req, res) => {
     const { userId } = req.params;
+    console.log(`Fetching rentals for user: ${userId}`);
   
     const query = 'SELECT Rental.* FROM User JOIN Rental ON User.user_id = Rental.user_id WHERE User.user_id = ?';
     connection.query(query, [userId], (err, results) => {
@@ -35,6 +40,8 @@ const createRental = (req, res) => {
       res.json(results);
     });
   };
-  
-  module.exports = { createRental, getUserRentals };
-  
+
+  return { createRental, getUserRentals }
+}
+
+module.exports = rentalController;

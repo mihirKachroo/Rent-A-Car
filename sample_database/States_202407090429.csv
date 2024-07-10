@@ -1,4 +1,4 @@
-state_id,state_name,time_zone
+"state_id","state_name","time_zone"
 ak,Alaska,Alaska
 al,Alabama,Central
 ar,Arkansas,Central
@@ -6,7 +6,7 @@ az,Arizona,Mountain
 ca,California,Pacific
 co,Colorado,Mountain
 ct,Connecticut,Eastern
-dc,"District of Columbia",Eastern
+dc,District of Columbia,Eastern
 de,Delaware,Eastern
 fl,Florida,Eastern
 ga,Georgia,Eastern
@@ -26,21 +26,21 @@ mn,Minnesota,Central
 mo,Missouri,Central
 ms,Mississippi,Central
 mt,Montana,Mountain
-nc,"North Carolina",Eastern
-nd,"North Dakota",Central
+nc,North Carolina,Eastern
+nd,North Dakota,Central
 ne,Nebraska,Central
-nh,"New Hampshire",Eastern
-nj,"New Jersey",Eastern
-nm,"New Mexico",Mountain
+nh,New Hampshire,Eastern
+nj,New Jersey,Eastern
+nm,New Mexico,Mountain
 nv,Nevada,Pacific
-ny,"New York",Eastern
+ny,New York,Eastern
 oh,Ohio,Eastern
 ok,Oklahoma,Central
 or,Oregon,Pacific
 pa,Pennsylvania,Eastern
-ri,"Rhode Island",Eastern
-sc,"South Carolina",Eastern
-sd,"South Dakota",Central
+ri,Rhode Island,Eastern
+sc,South Carolina,Eastern
+sd,South Dakota,Central
 tn,Tennessee,Central
 tx,Texas,Central
 ut,Utah,Mountain
@@ -48,5 +48,5 @@ va,Virginia,Eastern
 vt,Vermont,Eastern
 wa,Washington,Pacific
 wi,Wisconsin,Central
-wv,"West Virginia",Eastern
+wv,West Virginia,Eastern
 wy,Wyoming,Mountain

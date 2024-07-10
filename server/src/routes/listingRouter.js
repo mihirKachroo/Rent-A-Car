@@ -1,9 +1,16 @@
 const express = require('express');
-const router = express.Router();
-const { getListings, createListing, updateListingStatus } = require('../controllers/listingController');
+const listingController = require('../controllers/listingController');
 
-router.get('/', getListings);
-router.post('/', createListing);
-router.put('/status', updateListingStatus);
+module.exports = (connection) => {
+  const router = express.Router();
 
-module.exports = router;
+  const controller = listingController(connection);
+
+  router.get('/', controller.getListings);
+  router.post('/', controller.createListing);
+  router.put('/status', controller.updateListingStatus);
+  // router.get('/search', controller.searchListings);
+  router.get('/search/filters', controller.searchListingsWithFilters);
+  
+  return router;
+};

@@ -34,10 +34,11 @@ const OwnerMainPage: React.FC = () => {
   const { user } = useAuth();
 
   useEffect(() => {
+    console.log('current user is ', user);
     const fetchListings = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/listings?owner_id=${user?.user_id}`
+          `http://localhost:3000/listings?owner_id=${user?.userId}`
         );
         setListings(response.data);
       } catch (error) {
@@ -62,7 +63,7 @@ const OwnerMainPage: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{ mt: 7 }}>
       <Box
         display="flex"
         justifyContent="space-between"
@@ -78,7 +79,7 @@ const OwnerMainPage: React.FC = () => {
           Create Listing
         </Button>
       </Box>
-      <Breadcrumbs aria-label="breadcrumb">
+      {/* <Breadcrumbs aria-label="breadcrumb">
         <Link color="inherit" onClick={() => setSelectedListing(null)}>
           Listings
         </Link>
@@ -102,11 +103,12 @@ const OwnerMainPage: React.FC = () => {
             <Typography>Select a listing to see details</Typography>
           )}
         </Box>
-      </Box>
+      </Box> */}
+
       <CreateListingModal
         open={modalOpen}
         handleClose={handleCloseModal}
-        ownerId={user!.user_id}
+        ownerId={user!.userId}
       />
     </Container>
   );

@@ -1,0 +1,11 @@
+"user_id","first_name","last_name","password","status","email","date_of_birth","dealer_rating","dealer_num_ratings"
+"0fd27398",Patricia,Elliott,I)C7gkY$Og,inactive,deanjulie@example.net,"1997-08-15 00:00:00",3.0,533
+"10bd1189",James,Johnson,_3QfJi#)nX,active,robert19@example.com,"1987-09-14 00:00:00",1.0,93
+"1a97288c",Cody,Nguyen,"8L+Bni)q@z",banned,gdelacruz@example.net,"1985-03-15 00:00:00",4.0,434
+"34a358d4",Lisa,Miller,+2+n7Lod_M,active,brendamorrow@example.net,"1979-04-23 00:00:00",2.0,457
+"59def556",Shaun,Sanders,ay8Wthda^x,active,christopherbass@example.com,"1998-03-27 00:00:00",2.0,308
+"8f1ae0dd",Stacy,Marshall,@xHMrh0+@2,active,hcortez@example.net,"1980-08-08 00:00:00",5.0,702
+a0ae68e7,Kathleen,Diaz,mYxlD(V@^2,inactive,walkeralicia@example.org,"1972-05-20 00:00:00",3.0,263
+af5e1987,Thomas,Hoover,_9$BrSKy_#,banned,alexander00@example.net,"1969-09-14 00:00:00",5.0,413
+db9c33aa,Dominic,Garcia,C%ufZ1Um0B,active,mjones@example.com,"1965-01-02 00:00:00",5.0,268
+ea0e89f7,Holly,Lee,_21!EHlqo3,banned,timothy98@example.org,"1967-01-16 00:00:00",2.0,423

@@ -40,12 +40,12 @@ export const api = {
       params: filters,
     }),
 
-  // Favorites endpoints
-  addFavorite: (userId: string, listingId: string) =>
-    axios.post(`${API_BASE_URL}/favorites`, { userId, listingId }),
+  // Favourites endpoints
+  addFavourite: (userId: string, listingId: string) =>
+    axios.post(`${API_BASE_URL}/favourites`, { userId, listingId }),
 
-  getUserFavorites: (userId: string) =>
-    axios.get<Listing[]>(`${API_BASE_URL}/favorites/${userId}`),
+  getUserFavourites: (userId: string) =>
+    axios.get<Listing[]>(`${API_BASE_URL}/favourites/${userId}`),
 
   // Rentals endpoints
   createRental: (rental: {

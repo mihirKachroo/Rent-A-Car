@@ -17,18 +17,14 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ isOwner }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      if (isOwner) {
-        await ownerRegister(email, password, dob);
-        navigate('/owner');
-      } else {
-        await register(email, password, dob);
-        navigate('/search');
-      }
-      alert('Registration successful!');
-    } catch (error) {
-      alert('Registration failed. Please try again.');
+    if (isOwner) {
+      await ownerRegister(email, password, dob);
+      navigate('/owner');
+    } else {
+      await register(email, password, dob);
+      navigate('/search');
     }
+    alert('Registration successful!');
   };
 
   return (
