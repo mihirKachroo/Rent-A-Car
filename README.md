@@ -70,6 +70,53 @@ Replace `path/to/test_query.sql` with the path to the downloaded SQL file contai
 
 ***
 
+
+
+
+## 🏗️ Creating and Loading Production Database
+### Description of Production Data
+We generated the production dataset using a combination of synthetic data and cleaned-up real data. The data is sourced from `vehicles.csv` (downloaded from [Kaggle](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data)) and we made several enrichments using the `Faker` library to create realistic User and Car Owner profiles, as well as detailed car listings and reviews.
+
+### How the Data is Imported, Generated, Cleaned
+1. **Loading and Cleaning Data:**
+    - Raw data loaded from `vehicles.csv`.
+    - Missing values filled using randomly sampled values from the non-missing data or generated using specific rules.
+    - Additional columns are populated with synthetic data to make sure the data is complete, and there are no `NaN`, `NULL` or `None` values.
+2. **Data Transformation:**
+    - Dates generated within a specified range for User, Owner, Rentals tables.
+    - Descriptions & other text fields generated using the Faker library.
+    - Non-ASCII characters handled appropriately (manual filtering).
+3. **Data Export:**
+    - The cleaned & enriched data is saved into multiple CSV files representing different tables in the database, then imported onto our MySQL Workbench setup.
+
+You can find all our production data in CSV format [here](https://github.com/mihirKachroo/Rent-A-Car/tree/main/production_database)
+
+### Using our production data to populate the database
+
+To populate your database with the production dataset, follow these steps:
+
+1. Setup a Python Environment and Install the following libraries:
+```
+pip install pandas numpy faker
+```
+
+2. Run ALL CELLS in the provided Jupyter Notebook `My Production Database.ipynb` found [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/Production%20Database.ipynb) to generate and clean the data. This notebook will output the following CSV files:
+- `prod_cars_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_cars_table.csv)
+- `prod_users_table.csv`[here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_users_table.csv)
+- `prod_owners_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_owners_table.csv)
+- `prod_rentals_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_rentals_table.csv)
+- `prod_listings_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_listings_table.csv)
+- `prod_favorites_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_favorites_table.csv)
+- `prod_states_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_states_table.csv)
+- `prod_reviews_table.csv` [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/production_database/prod_reviews_table.csv)
+
+NOTE: due to randomness we introduced into the dataset, we will have different values in the User, Owner, Reviews, Rentals tables for each run of the notebook. It is crucial all cells are run one-by-one to ensure no discrepancy between Foreign keys in the data.
+
+3. Import CSV Files into MySQL Database Using MySQL Workbench. For each CSV file, follow these steps:
+	- Create Tables & Constraints using the script [here](https://github.com/mihirKachroo/Rent-A-Car/blob/main/sample_database/createdb.sql)
+	- Follow the same steps from **Step 1: Set Up the MySQL Database**, already covered in our Sample Data loading steps.
+
+
 ## 🖥️ Running the Database-Driven Application
 - Clone the project and install dependencies:
 - cd into ```frontend```
@@ -81,3 +128,11 @@ Replace `path/to/test_query.sql` with the path to the downloaded SQL file contai
 
 The application we are developing for our project currently contains a login/registration page and displays listings. 
 
+### Feature/Functionality 1: R6. Login and Registration Page 🧑‍💻
+TODO: State which files contain the implementation
+
+### Feature/Functionality 2: R7. Basic Search Filters 🔍
+TODO: State which files contain the implementation
+
+### Feature/Functionality 3: R8. Shortlist for User Favorites 🔖
+TODO: State which files contain the implementation
