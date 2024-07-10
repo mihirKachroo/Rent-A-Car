@@ -13,9 +13,11 @@ import { useAuth } from '../context/AuthContext';
 import UserDrawer from '../components/UserDrawer';
 import FilterComponent from '../components/AdvancedSearch';
 import { Listing } from '../types';
+import { mapToListing } from '../utils';
+import listingService from '../services/listingService';
 
 const SearchPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  // const [searchQuery, setSearchQuery] = useState('');
   const [sortOption, setSortOption] = useState<string>('');
   const [listings, setListings] = useState<Listing[]>([]);
   const [page, setPage] = useState(1);
@@ -24,29 +26,46 @@ const SearchPage: React.FC = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const getListings = async () => {
+    const fetchListings = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/listings');
-        setListings(response.data);
+        const fetchedListings = await listingService.getListings();
+        setListings(fetchedListings);
       } catch (error) {
         console.error('Error fetching listings', error);
       }
     };
 
-    getListings();
+    fetchListings();
   }, [user]);
 
-  const handleSearch = async () => {
+  // const handleSearch = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       'http://localhost:3000/listings/search',
+  //       {
+  //         params: { query: searchQuery },
+  //       }
+  //     );
+  //     setListings(response.data);
+  //   } catch (error) {
+  //     console.error('Error searching listings:', error);
+  //   }
+  // };
+
+  const handleApplyFilters = async (filters: any) => {
     try {
-      const response = await axios.get(
-        'http://localhost:3000/listings/search',
-        {
-          params: { query: searchQuery },
-        }
+      const { maxPrice, state, condition } = filters;
+
+      const filteredListings = await listingService.getFilteredListings(
+        maxPrice,
+        state,
+        condition,
+        sortOption,
+        listingsPerPage
       );
-      setListings(response.data);
+      setListings(filteredListings);
     } catch (error) {
-      console.error('Error searching listings:', error);
+      console.error('Error applying filters:', error);
     }
   };
 
@@ -62,27 +81,6 @@ const SearchPage: React.FC = () => {
     page * listingsPerPage
   );
 
-  const handleApplyFilters = async (filters: any) => {
-    try {
-      const { price, state, condition } = filters;
-      const response = await axios.get(
-        'http://localhost:3000/listings/search/filters',
-        {
-          params: {
-            condition,
-            state_id: state,
-            max_price: price[1],
-            order_filter: sortOption,
-            number_of_listings: listingsPerPage,
-          },
-        }
-      );
-      setListings(response.data);
-    } catch (error) {
-      console.error('Error applying filters:', error);
-    }
-  };
-
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
       {/* Left Drawer for User Information */}
@@ -92,7 +90,7 @@ const SearchPage: React.FC = () => {
       <Box sx={{ flexGrow: 1, p: 3, overflowY: 'auto' }}>
         <Toolbar />
         {/* Search Bar */}
-        <Box sx={{ mb: 2, display: 'flex', gap: 2 }}>
+        {/* <Box sx={{ mb: 2, display: 'flex', gap: 2 }}>
           <TextField
             fullWidth
             variant="outlined"
@@ -104,7 +102,7 @@ const SearchPage: React.FC = () => {
           <Button variant="contained" color="primary" onClick={handleSearch}>
             Search
           </Button>
-        </Box>
+        </Box> */}
 
         {/* Filters */}
         <FilterComponent onApplyFilters={handleApplyFilters} />

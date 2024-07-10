@@ -1,7 +1,14 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  ReactNode,
+  useEffect,
+} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { User } from '../types';
+import authService from '../services/authService';
+import axios from 'axios';
 
 // Define the shape of our context state
 interface AuthContextType {
@@ -26,14 +33,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   const login = async (email: string, password: string) => {
     console.log('attempting login with ', email);
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', {
-        email,
-        password,
-      });
-      const user: User = response.data;
+      const user = await authService.login(email, password);
       setUser(user);
       localStorage.setItem('user', JSON.stringify(user));
     } catch (error) {
@@ -50,11 +60,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const ownerLogin = async (email: string, password: string) => {
     try {
-      const response = await axios.post(
-        'http://localhost:3000/auth/owner-login',
-        { email, password }
-      );
-      const owner: User = response.data;
+      const owner = await authService.ownerLogin(email, password);
       setUser(owner);
       localStorage.setItem('user', JSON.stringify(owner));
       navigate('/owner-dashboard');
@@ -72,12 +78,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const register = async (email: string, password: string, dob: string) => {
     try {
-      const response = await axios.post('http://localhost:3000/auth/register', {
-        email,
-        password,
-        dob,
-      });
-      const user: User = response.data;
+      const user = await authService.register(email, password, dob);
       console.log(user);
       setUser(user);
       localStorage.setItem('user', JSON.stringify(user));
@@ -94,15 +95,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     dob: string
   ) => {
     try {
-      const response = await axios.post(
-        'http://localhost:3000/auth/owner-register',
-        {
-          email,
-          password,
-          dob,
-        }
-      );
-      const owner: User = response.data;
+      const owner = await authService.ownerRegister(email, password, dob);
       setUser(owner);
       localStorage.setItem('user', JSON.stringify(owner));
       alert('Owner registration successful!');

@@ -11,6 +11,7 @@ import { AuthProvider } from './context/AuthContext';
 import OwnerMainPage from './pages/OwnerMainPage';
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme/theme';
+import FavouritesPage from './pages/FavouritesPage';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/search" element={<SearchPage />} />
+              <Route path="/favourites" element={<FavouritesPage />} />
               <Route path="/owner" element={<OwnerMainPage />} />
               <Route path="/owner-login" element={<OwnerLoginPage />} />
               <Route path="/owner-register" element={<OwnerRegisterPage />} />

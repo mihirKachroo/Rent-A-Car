@@ -19,8 +19,14 @@ const FilterComponent: React.FC<FilterProps> = ({ onApplyFilters }) => {
   const [state, setState] = useState<string>('');
   const [condition, setCondition] = useState<string>('');
 
-  const handlePriceChange = (event: Event, newValue: number) => {
-    setMaxPrice(newValue as number);
+  const handlePriceChange = (
+    event: Event,
+    value: number | number[],
+    activeThumb: number
+  ) => {
+    if (typeof value === 'number') {
+      setMaxPrice(value);
+    }
   };
 
   const handleStateChange = (event: SelectChangeEvent) => {
@@ -49,7 +55,9 @@ const FilterComponent: React.FC<FilterProps> = ({ onApplyFilters }) => {
           step={10}
           marks
           min={10}
-          max={110}
+          max={200}
+          value={maxPrice}
+          onChange={handlePriceChange}
         />
       </FormControl>
       <FormControl variant="outlined" sx={{ minWidth: 120 }}>

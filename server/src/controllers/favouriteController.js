@@ -1,5 +1,5 @@
 const favouriteController = (connection) => {
-  const addFavourite = (req, res, connection) => {
+  const addFavourite = (req, res) => {
     const { userId, listingId } = req.body;
     console.log(`Adding favourite for user: ${userId}, listing: ${listingId}`);
     const query = "INSERT INTO Favorite (user_id, listing_id) VALUES (?, ?)";
@@ -13,7 +13,7 @@ const favouriteController = (connection) => {
     });
   };
 
-  const getUserFavorites = (req, res, connection) => {
+  const getUserFavorites = (req, res) => {
     const { userId } = req.params;
     console.log(`Fetching favourites for user: ${userId}`);
     const query =

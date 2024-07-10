@@ -104,22 +104,54 @@ const listingController = (connection) => {
   // };
   
   const searchListingsWithFilters = (req, res) => {
-    console.log(req.query);
+    console.log('Received query parameters:', req.query);
     const { condition, state_id, max_price, order_filter, number_of_listings } = req.query;
-    const query = `SELECT * FROM Listings
-                   WHERE \`condition\` = ? AND state_id = ? AND price <= ? AND status = 'active'
-                   ORDER BY ${connection.escapeId(order_filter)}
-                   LIMIT ?`;
-    connection.query(query, [condition, state_id, max_price, parseInt(number_of_listings)], (err, results) => {
+  
+    // Base query
+    let query = `SELECT * FROM Listings WHERE status = 'active'`;
+    let queryParams = [];
+  
+    // Add filters conditionally
+    if (condition) {
+      query += ` AND \`condition\` = ?`;
+      queryParams.push(condition);
+    }
+  
+    if (state_id) {
+      query += ` AND state_id = ?`;
+      queryParams.push(state_id);
+    }
+  
+    if (max_price) {
+      query += ` AND price <= ?`;
+      queryParams.push(Number(max_price));
+    }
+  
+    // Add ORDER BY clause if order_filter is not empty
+    if (order_filter) {
+      query += ` ORDER BY ${connection.escapeId(order_filter)}`;
+    }
+  
+    // Add LIMIT clause
+    query += ` LIMIT ?`;
+    queryParams.push(parseInt(number_of_listings));
+  
+    // Log the query and parameters
+    console.log('Final query:', query);
+    console.log('Query parameters:', queryParams);
+  
+    connection.query(query, queryParams, (err, results) => {
       if (err) {
         console.error("Error searching listings:", err);
         res.status(500).send("Server error");
         return;
       }
-      console.log(results);
+      console.log('Query results:', results);
       res.json(results);
     });
   };
+  
+  
 
   return { getListings, createListing, updateListingStatus, searchListingsWithFilters }
 }

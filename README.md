@@ -128,11 +128,42 @@ NOTE: due to randomness we introduced into the dataset, we will have different v
 
 The application we are developing for our project currently contains a login/registration page and displays listings. 
 
-### Feature/Functionality 1: R6. Login and Registration Page 🧑‍💻
-TODO: State which files contain the implementation
+### Features and Functionalities
 
-### Feature/Functionality 2: R7. Basic Search Filters 🔍
-TODO: State which files contain the implementation
+#### R6. Login and Registration Page 🧑‍💻
 
-### Feature/Functionality 3: R8. Shortlist for User Favorites 🔖
-TODO: State which files contain the implementation
+##### Frontend
+
+- **Login Page**: `src/pages/LoginPage.tsx`
+- **Register Page**: `src/pages/RegisterPage.tsx`
+- **Owner Login Page**: `src/pages/OwnerLoginPage.tsx`
+- **Owner Main Page**: `src/pages/OwnerMainPage.tsx`
+- **Authentication Service**: `src/services/authService.ts`
+- **Authentication Context**: `src/context/AuthContext.tsx`
+
+##### Backend
+
+- **Auth Router**: `src/routes/authRouter.js`
+- **Auth Controller**: `src/controllers/authController.js`
+
+#### R7. Basic Search Filters 🔍
+
+##### Frontend
+
+- **Search Page**: `src/pages/SearchPage.tsx`
+- **Listing Service**: `src/services/listingService.ts`
+- **Advanced Search Component**: `src/components/AdvancedSearch.tsx`
+
+#### R8. Shortlist for User Favorites 🔖
+
+##### Frontend
+
+- **Listing Card Component**: `src/components/ListingCard.tsx`
+- **Favorites Page**: `src/pages/FavouritesPage.tsx`
+- **Search Page**: `src/pages/SearchPage.tsx`
+- **User Service**: `src/services/userService.ts`
+
+##### Backend
+
+- **Favourite Router**: `src/routes/favouriteRouter.js`
+- **Favourite Controller**: `src/controllers/favouriteController.js`
