@@ -128,11 +128,11 @@ NOTE: due to randomness we introduced into the dataset, we will have different v
 
 The application we are developing for our project currently contains a login/registration page and displays listings. 
 
-### Feature/Functionality 1: R6. Login and Registration Page
+### Feature/Functionality 1: R6. Login and Registration Page 🧑‍💻
 TODO: State which files contain the implementation
 
-### Feature/Functionality 2: R7. Basic Search Filters
+### Feature/Functionality 2: R7. Basic Search Filters 🔍
 TODO: State which files contain the implementation
 
-### Feature/Functionality 3: R8. Shortlist for User Favorites
+### Feature/Functionality 3: R8. Shortlist for User Favorites 🔖
 TODO: State which files contain the implementation
