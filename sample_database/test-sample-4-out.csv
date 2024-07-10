@@ -1,4 +1,5 @@
-listing_id,owner_id,manufacturer,model,state_id,year,rent_time,description,price,image_url,posting_date,region,condition,paint_color,mileage,status
-7306053731,1a97288c,chrysler,"300 touring l sedan 4d",ca,2018,22,"sample description 16",25.92,https://images.craigslist.org/00000_kkdGTrtQu9Mz_0gw0co_600x450.jpg,"2023-08-31 17:50:00",redding,good,black,62637,active
-7315090402,0fd27398,subaru,"legacy 2.5i limited",ca,2006,17,"sample description 15",34.70,https://images.craigslist.org/01212_h0PRyd7SmPRz_0cU09G_600x450.jpg,"2023-11-23 14:41:00","mohave county",good,black,145525,active
-7302062768,59def556,alfa-romeo,"romeo giulia sedan 4d",ca,2018,26,"sample description 13",34.59,https://images.craigslist.org/01212_9YGV5SROgpgz_0gw0co_600x450.jpg,"2023-12-10 21:17:00",visalia-tulare,good,white,97062,active
+rental_id,listing_id,user_id,rent_date,return_date,status
+6cd502ef,7306053731,67cab03c,"2024-06-19 18:17:00",,renting
+9384c7a7,7302062768,67cab03c,"2023-07-18 18:17:00","2023-08-31 18:17:00",returned
+f96ac0d1,7315770787,67cab03c,"2024-04-09 18:17:00","2024-04-29 18:17:00",returned
+7384c7a7,7315770787,67cab03c,"2024-06-05 18:17:00",,renting

@@ -1,10 +1,7 @@
--- Example to register a new User after checking they don't exist and generating a unique userid
-INSERT INTO User (user_id, first_name, last_name, password, email, date_of_birth)
-VALUES
-    ('58dce04d', 'Parsh', 'Parikh', '#wer$y456', 'parsh.parikh@example.com', '2004-03-24');
-
--- Example query for when a user tries to log in
-SELECT user_id, first_name, last_name
-FROM User
-WHERE email = 'parsh.parikh@example.com'
-  AND password = '#wer$y456';
+-- Example of basic search an filter feature to get top 3 good cars in california with price < 50 ordered by posting date
+-- only show active listings for rentals
+-- 67cab03c represents the current user's id
+SELECT * FROM Listings
+WHERE `condition` = 'good' AND state_id = 'ca' AND price <= 50 AND status = 'active'
+ORDER BY posting_date ASC
+Limit 3;

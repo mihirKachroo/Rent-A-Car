@@ -1,5 +1,8 @@
-rental_id,listing_id,user_id,rent_date,return_date,status
-6cd502ef,7306053731,67cab03c,"2024-06-19 18:17:00",,renting
-9384c7a7,7302062768,67cab03c,"2023-07-18 18:17:00","2023-08-31 18:17:00",returned
-f96ac0d1,7315770787,67cab03c,"2024-04-09 18:17:00","2024-04-29 18:17:00",returned
-7384c7a7,7315770787,67cab03c,"2024-06-05 18:17:00",,renting
+listing_id,owner_id,manufacturer,model,state_id,year,rent_time,description,price,image_url,posting_date,region,condition,paint_color,mileage,status
+7302062768,59def556,alfa-romeo,"romeo giulia sedan 4d",ca,2018,26,"sample description 13",34.59,https://images.craigslist.org/01212_9YGV5SROgpgz_0gw0co_600x450.jpg,"2023-12-10 21:17:00",visalia-tulare,good,white,97062,active
+7303585413,db9c33aa,alfa-romeo,"romeo stelvio ti sport",nm,2015,5,"sample description 7",49.57,https://images.craigslist.org/00J0J_lrL4weEiuZuz_0gw0co_600x450.jpg,"2024-03-14 21:21:00","santa fe / taos",good,red,172135,active
+7304209003,59def556,ford,escape,mn,2016,7,"sample description 1",5.96,https://images.craigslist.org/00c0c_kvvVHE9AHVDz_0x20oM_600x450.jpg,"2023-10-02 01:32:00","st cloud",excellent,white,87830,active
+7315233417,a0ae68e7,gmc,"sierra 3500hd",ks,2010,14,"sample description 3",24.48,https://images.craigslist.org/00B0B_dGDUV4xvlF1z_0jm0cT_600x450.jpg,"2024-04-27 03:47:00",topeka,good,blue,58460,inactive
+7315601085,1a97288c,honda,civic,ny,2012,11,"sample description 9",43.98,https://images.craigslist.org/00Q0Q_3hD3yT0cfRtz_0x20oM_600x450.jpg,"2024-03-23 14:04:00","new york city",excellent,black,161635,inactive
+7316551230,a0ae68e7,honda,civic,ca,2009,19,"sample description 5",32.45,https://images.craigslist.org/00R0R_6xu0LEvSV1bz_0cU09G_600x450.jpg,"2023-11-30 00:09:00","san diego",excellent,blue,115065,inactive
+7316738901,af5e1987,toyota,venza,nc,2007,8,"sample description 18",9.81,https://images.craigslist.org/01717_ao60XXaPrvVz_0kE0fu_600x450.jpg,"2024-03-04 13:15:00",asheville,excellent,blue,23822,inactive

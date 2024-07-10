@@ -1,10 +1,10 @@
--- Example INSERT statement for Favorite table
--- 67cab03c represents current user's id
-INSERT INTO Favorite (user_id, listing_id)
-VALUES ('67cab03c', '7303585413');
+-- Example to register a new User after checking they don't exist and generating a unique userid
+INSERT INTO User (user_id, first_name, last_name, password, email, date_of_birth)
+VALUES
+    ('58dce04d', 'Parsh', 'Parikh', '#wer$y456', 'parsh.parikh@example.com', '2004-03-24');
 
--- Example show all listings user has favorited
-SELECT Listings.*
-FROM Favorite
-JOIN Listings ON Favorite.listing_id = Listings.listing_id
-WHERE Favorite.user_id = '67cab03c';
+-- Example query for when a user tries to log in
+SELECT user_id, first_name, last_name
+FROM User
+WHERE email = 'parsh.parikh@example.com'
+  AND password = '#wer$y456';

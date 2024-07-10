@@ -1,2 +1,4 @@
-user_id,first_name,last_name
-58dce04d,Parsh,Parikh
+listing_id,owner_id,manufacturer,model,state_id,year,rent_time,description,price,image_url,posting_date,region,condition,paint_color,mileage,status
+7306053731,1a97288c,chrysler,"300 touring l sedan 4d",ca,2018,22,"sample description 16",25.92,https://images.craigslist.org/00000_kkdGTrtQu9Mz_0gw0co_600x450.jpg,"2023-08-31 17:50:00",redding,good,black,62637,active
+7315090402,0fd27398,subaru,"legacy 2.5i limited",ca,2006,17,"sample description 15",34.70,https://images.craigslist.org/01212_h0PRyd7SmPRz_0cU09G_600x450.jpg,"2023-11-23 14:41:00","mohave county",good,black,145525,active
+7302062768,59def556,alfa-romeo,"romeo giulia sedan 4d",ca,2018,26,"sample description 13",34.59,https://images.craigslist.org/01212_9YGV5SROgpgz_0gw0co_600x450.jpg,"2023-12-10 21:17:00",visalia-tulare,good,white,97062,active

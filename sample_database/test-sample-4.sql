@@ -1,7 +1,16 @@
--- Example of basic search an filter feature to get top 3 good cars in california with price < 50 ordered by posting date
--- only show active listings for rentals
--- 67cab03c represents the current user's id
-SELECT * FROM Listings
-WHERE `condition` = 'good' AND state_id = 'ca' AND price <= 50 AND status = 'active'
-ORDER BY posting_date ASC
-Limit 3;
+-- Query to update a listing into an active rental
+-- add to it the rental table with user's specifications and "renting" status
+-- rent date and return date are info from user interaction and listing info
+INSERT INTO Rental (rental_id, listing_id, user_id, rent_date, status)
+VALUES ('7384c7a7', '7315770787', '67cab03c', '2024-06-05', 'renting');
+
+-- update the listing in the listings table as a current rental
+UPDATE Listings
+SET status = 'inactive'
+WHERE listing_id = '7315770787';
+
+-- show all rental data of current user
+SELECT Rental.*
+FROM User
+JOIN Rental ON User.user_id = Rental.user_id
+WHERE User.user_id = '67cab03c';
