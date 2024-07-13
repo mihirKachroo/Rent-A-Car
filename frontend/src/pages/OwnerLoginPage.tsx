@@ -9,7 +9,7 @@ const OwnerLoginPage: React.FC = () => {
   return (
     <Container maxWidth="sm">
       <Toolbar />
-      <LoginForm isOwner />
+      <LoginForm type="owner" />
       <Box mt={2} textAlign="center">
         <Button variant="outlined" onClick={() => navigate('/owner-register')}>
           Are you a new owner who want to rent out your car?

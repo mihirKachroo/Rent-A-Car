@@ -67,7 +67,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Container disableGutters maxWidth={false} sx={{ position: 'relative' }}>
       <CssBaseline />
       <AppBar position="fixed">
         <Toolbar>
@@ -89,7 +89,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Toolbar>
       </AppBar>
       {children}
-    </Box>
+    </Container>
   );
 };
 

@@ -46,6 +46,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
       const user = await authService.login(email, password);
       setUser(user);
       localStorage.setItem('user', JSON.stringify(user));
+      navigate('/search');
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.error('Error response:', error.response);
