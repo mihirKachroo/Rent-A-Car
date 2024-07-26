@@ -29,6 +29,7 @@ const SearchPage: React.FC = () => {
     const fetchListings = async () => {
       try {
         const fetchedListings = await listingService.getListings();
+        console.log(fetchedListings);
         setListings(fetchedListings);
       } catch (error) {
         console.error('Error fetching listings', error);
@@ -37,20 +38,6 @@ const SearchPage: React.FC = () => {
 
     fetchListings();
   }, [user]);
-
-  // const handleSearch = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       'http://localhost:3000/listings/search',
-  //       {
-  //         params: { query: searchQuery },
-  //       }
-  //     );
-  //     setListings(response.data);
-  //   } catch (error) {
-  //     console.error('Error searching listings:', error);
-  //   }
-  // };
 
   const handleApplyFilters = async (filters: any) => {
     try {

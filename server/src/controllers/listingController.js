@@ -2,6 +2,40 @@ const { v4: uuidv4 } = require('uuid');
 const moment = require('moment');
 
 const listingController = (connection) => {
+
+  const getListingById = async (req, res) => {
+    const { listingId } = req.params;
+  
+    const query = 'SELECT * FROM Listings WHERE listing_id = ?';
+    
+    connection.query(query, [listingId], (err, listingResults) => {
+      if (err) {
+        console.error('Error fetching listing:', err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+      }
+      if (listingResults.length === 0) {
+        return res.status(404).json({ error: 'Listing not found' });
+      }
+  
+      const listing = listingResults[0];
+
+    // Assuming you have a reviews table and want to include reviews in the response
+    const reviewsQuery = 'SELECT * FROM Review WHERE listing_id = ?';
+    connection.query(reviewsQuery, [listingId], (err, reviewsResults) => {
+      if (err) {
+        console.error('Error fetching reviews:', err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+      }
+
+      const response = {
+        listing,
+        reviews: reviewsResults
+      };
+      console.log(response)
+      res.json(response);
+      });
+    });
+  };
   
   const getListings = (req, res) => {
     const query = "SELECT * FROM Listings";
@@ -151,9 +185,49 @@ const listingController = (connection) => {
     });
   };
   
-  
+  const getAveragePriceByCondition = (req, res) => {
+    const { manufacturer } = req.query;
+    console.log(`Fetching average price for manufacturer: ${manufacturer}`);
+    const query = `
+      SELECT \`condition\`, AVG(price) AS average_price
+      FROM Listings
+      WHERE status = 'active' AND manufacturer = ?
+      GROUP BY \`condition\`;
+    `;
+    connection.query(query, [manufacturer], (err, results) => {
+      if (err) {
+        console.error("Error fetching average prices:", err);
+        res.status(500).send("Server error");
+        return;
+      }
+      res.json(results);
+    });
+  }; 
 
-  return { getListings, createListing, updateListingStatus, searchListingsWithFilters }
+  const getModelListingFrequency = (req, res) => {
+    console.log('Fetching model listing frequency');
+    const query = `
+      SELECT 
+        cm.manufacturer, 
+        cm.model, 
+        (SELECT COUNT(*) 
+         FROM Listings l 
+         WHERE l.manufacturer = cm.manufacturer AND l.model = cm.model AND l.status = 'active') AS listing_count
+      FROM Cars cm
+      ORDER BY listing_count DESC
+      LIMIT 10;
+    `;
+    connection.query(query, (err, results) => {
+      if (err) {
+        console.error("Error fetching model listing frequency:", err);
+        res.status(500).send("Server error");
+        return;
+      }
+      res.json(results);
+    });
+  };
+
+  return { getListingById, getListings, createListing, updateListingStatus, searchListingsWithFilters, getAveragePriceByCondition, getModelListingFrequency }
 }
 
 module.exports = listingController;

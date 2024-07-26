@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -14,11 +14,13 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Avatar,
 } from '@mui/material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { useAuth } from 'context/AuthContext';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -26,6 +28,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [open, setOpen] = React.useState(false);
+  const { user } = useAuth();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -34,6 +37,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const links = [
     { text: 'Browse Cars', path: '/search' },
     { text: 'My Favourites', path: '/favourites' },
+    { text: 'Listings Frequency By Model', path: '/listing-frequency' },
+    {
+      text: 'Average Price By Manufacturer & Condition',
+      path: '/average-condition',
+    },
+    { text: 'My Rentals', path: '/rentals' },
   ];
 
   const DrawerList = (
@@ -74,12 +83,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Car Finder
           </Typography>
-          <Button color="inherit" component={Link} to="/login">
-            Login
-          </Button>
-          <Button color="inherit" component={Link} to="/register">
-            Register
-          </Button>
+
+          {user ? (
+            <Button>
+              <Avatar>H</Avatar>
+            </Button>
+          ) : (
+            <>
+              <Button color="inherit" component={Link} to="/login">
+                Login
+              </Button>
+              <Button color="inherit" component={Link} to="/register">
+                Register
+              </Button>
+            </>
+          )}
           <Button onClick={toggleDrawer(true)} sx={{ color: 'white' }}>
             <MenuIcon />
           </Button>

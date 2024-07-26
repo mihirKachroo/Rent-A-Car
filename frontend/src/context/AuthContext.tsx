@@ -10,7 +10,6 @@ import { User } from '../types';
 import authService from '../services/authService';
 import axios from 'axios';
 
-// Define the shape of our context state
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
@@ -35,6 +34,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
+    console.log(storedUser);
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }

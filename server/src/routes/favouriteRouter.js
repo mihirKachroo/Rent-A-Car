@@ -7,6 +7,7 @@ module.exports = (connection) => {
   const controller = favouriteController(connection);
   
   router.post('/', controller.addFavourite);
+  router.delete('/', controller.removeFavourite);
   router.get('/:userId', controller.getUserFavorites);
 
   return router;

@@ -14,10 +14,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Listing, Owner } from '../types';
+import { Listing } from '../types';
 import { useAuth } from '../context/AuthContext';
-import axios from 'axios';
+import { useFavourites } from '../context/FavouriteContext';
 import userService from '../services/userService';
+import { useNavigate } from 'react-router-dom';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -40,21 +41,31 @@ interface ListingCardProps {
 
 const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
   const [expanded, setExpanded] = React.useState(false);
-
   const { user } = useAuth();
+  const { favouriteIds, addFavourite, removeFavourite } = useFavourites();
+
+  const navigate = useNavigate();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
-  const { year, manufacturer, model, price, mileage, region, condition } =
-    listing;
+  const isFavourite = favouriteIds.includes(listing.listingId);
 
-  const handleAddFavourite = async () => {
+  const handleToggleFavourite = async () => {
+    if (!user) {
+      console.error('User not authenticated');
+      return;
+    }
+
     try {
-      await userService.addFavourite(user!.userId, listing.listingId);
+      if (isFavourite) {
+        await removeFavourite(user.userId, listing.listingId);
+      } else {
+        await addFavourite(user.userId, listing);
+      }
     } catch (error) {
-      console.error('Error adding to favourites:', error);
+      console.error('Error toggling favourite:', error);
     }
   };
 
@@ -71,29 +82,33 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={`${year} ${manufacturer} ${model}`}
+        onClick={() => navigate(`/listing/${listing.listingId}`)}
+        title={`${listing.year} ${listing.manufacturer} ${listing.model}`}
         subheader="September 14, 2016"
       />
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image={listing.imageUrl}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          <strong>Price:</strong> ${price}/day
+          <strong>Price:</strong> ${listing.price}/day
           <br />
-          <strong>Mileage:</strong> {mileage.toLocaleString()} km
+          <strong>Mileage:</strong> {listing.mileage.toLocaleString()} km
           <br />
-          <strong>Region:</strong> {region}
+          <strong>Region:</strong> {listing.region}
           <br />
-          <strong>Condition:</strong> {condition}
+          <strong>Condition:</strong> {listing.condition}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites" onClick={handleAddFavourite}>
-          <FavoriteIcon />
+        <IconButton
+          aria-label="add to favorites"
+          onClick={handleToggleFavourite}
+        >
+          <FavoriteIcon style={{ color: isFavourite ? red[500] : 'inherit' }} />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
