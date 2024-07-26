@@ -1,3 +1,4 @@
+-- Calculate total rental time for a given user (total amount of time user has spent renting across different cars) 
 WITH RecursiveRentalTime AS (
     SELECT user_id, 
            rental_id,
